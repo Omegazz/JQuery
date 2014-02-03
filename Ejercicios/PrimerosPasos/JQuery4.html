@@ -16,7 +16,7 @@
 				* Metodo que sirve para aparecer elementos que se encuentran ocultos.
 				*  -> $(selector).fadeIn(speed,callback);
 				*/
-				$("button").click(function(){
+				$("#btn1").click(function(){
 				//Muestra el elemento
 				$("#div1").fadeIn();
 				//Muestra el elemento de forma lenta
@@ -24,13 +24,27 @@
 				//Muestra el elemento tomando en cuenta los milisegundos
 				$("#div3").fadeIn(3000);
 			  });
+			  
+			  /*
+			  * Metodo que utiliza la funcion toggle la cual realiza la funcion de mostrar y ocultar
+			  * en conjunto con la funcion fadeIn
+			  */
+			  $("#btn2").click(function(){
+				$("#div1").fadeToggle();
+				
+				$("#div2").fadeToggle("slow");
+				
+				$("#div3").fadeToggle(3000);
+			  });
+			  
 			});
 		</script>
 	</head>
 
 	<body>
 		<p>Demostrando fadeIn() con diferentes par&aacute;metros.</p>
-		<button>Click para ocultar las cajas</button>
+		<button id="btn1">Click para mostrar las cajas</button>
+		<button id="btn2">Click para ocultar las cajas</button>
 		<br><br>
 		<!--Cajas de colores hechas con divs de distintas dimensiones-->
 		<div id="div1" style="width:80px;height:80px;display:none;background-color:red;"></div><br>
