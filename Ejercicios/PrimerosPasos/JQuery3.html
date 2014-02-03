@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+		-- Primeros pasos en JQuery
+		-- Autor: Diego Salas 
+		-- Fecha creacion: 03/02/2014
+		-- Fecha ultima modificacion: 03/02/2014
+		-->
+		<!--Referencia a los metdos propios del JQuery en una ubicacion determinada -->
+		<title>JQuery 3 primeros pasos</title>
+		<script src="js/jquery-1.11.0.js">
+		</script>
+		
+		<!--Llamado de scripts de JQuery -->
+		<script>
+			$(document).ready(function(){
+				/* 
+				* Realiza la funcion de mostrar y ocultar en un mismo botón 
+				*
+				*/
+				$("#btn1").click(function(){
+					$("p").toggle(100);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<h2>Esto es un encabezado</h2>
+		<div id="botones" position="relative">
+			<button id="btn1">Esconder/Mostrar</button>
+		</div>
+		<div id="contenido" position="relative">
+			<p>Este es un p&aacute;rrafo</p>
+			<p>Esto es otro p&aacute;rrafo</p>
+			<p>Esto es otrooooooo p&aacute;rrafo</p>
+			<p>Y otroooooooo p&aacute;rrafo</p>
+		</div>
+	</body>
+</html>
