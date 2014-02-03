@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+		-- Primeros pasos en JQuery
+		-- Autor: Diego Salas 
+		-- Fecha creacion: 03/02/2014
+		-- Fecha ultima modificacion: 03/02/2014
+		-->
+		<!--Referencia a los metdos propios del JQuery en una ubicacion determinada -->
+		<title>JQuery 2 primeros pasos</title>
+		<script src="js/jquery-1.11.0.js">
+		</script>
+		
+		<!--Llamado de scripts de JQuery -->
+		<script>
+			$(document).ready(function(){
+			
+				/*
+				* Ejecuta la funcion del botón al momento de dar click en un elemento de tipo
+				* párrafo
+				*/
+				$("p").click(function(){
+					$(this).hide();
+				});
+			  
+			  /*
+			  * En caso de doble click oculta un título tipo h1
+			  */
+			$("h1").dblclick(function(){
+				$(this).hide();
+			});
+			  
+			});
+		</script>
+	</head>
+	<body>
+		<div id="contenido" position="relative">
+			<h2>Esto es un encabezado</h2>
+			<p>Este es un p&aacute;rrafo</p>
+			<p>Esto es otro p&aacute;rrafo</p>
+			<p>Esto es otrooooooo p&aacute;rrafo</p>
+			<p>Y otroooooooo p&aacute;rrafo</p>
+			<h1><b>HAZME DOBLE CLICK!</b></h1>
+		</div>
+	</body>
+</html>
