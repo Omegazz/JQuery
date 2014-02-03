@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!--
+		-- Primeros pasos en JQuery
+		-- Autor: Diego Salas 
+		-- Fecha creacion: 03/02/2014
+		-- Fecha ultima modificacion: 03/02/2014
+		-->
+		<title>JQuery 5 primeros pasos</title>
+		<!--Estilo CSS-->
+		<style type="text/css"> 
+			#panel, #flip
+			{
+				padding:5px;
+				text-align:center;
+				background-color:#3385FF;
+				border:solid 1px #143566;
+			}
+			#panel
+			{
+				padding:50px;
+				display:none;
+			}
+		</style>
+		<!--Referencia a los metdos propios del JQuery en una ubicacion determinada -->
+		<script src="js/jquery-1.11.0.js"></script>
+		
+		<!--Segmento de scripts-->
+		<script>
+			$(document).ready(function(){
+				/*
+				* Metodo slide que funciona para deslizar objetos como divs o parrafos
+				* -> $(selector).slideDown(speed,callback);
+				* -> $(selector).slideUp(speed,callback);
+				* -> $(selector).slideToggle(speed,callback);
+				*/
+				$("#flip").click(function(){
+					$("#panel").slideToggle("slow");
+				});
+			  
+			});
+		</script>
+	</head>
+
+	<body>
+		<!--Paneles-->
+		<div id="flip">Click aqu&iacute; para deslizar el panel abajo y arriba</div>
+		<div id="panel">¡Hola mundo!</div>
+
+	</body>
+</html>
